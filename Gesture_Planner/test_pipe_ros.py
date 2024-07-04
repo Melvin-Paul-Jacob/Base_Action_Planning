@@ -83,17 +83,6 @@ class Pipe():
                             self.g_real_object_pose = real_object_pose
                             self.g_valid_points = valid_pose_array
                             break
-                
-                #cv2.imshow("Image", img)
-                '''k = cv2.waitKey(1) & 0xff
-                if k == 27:
-                    print("-> Ending Video Stream")
-                    #self.cam.release_camera()
-                    cv2.destroyAllWindows()
-                    break  '''
-            #self.cam.publish_img = []
-            #self.cam.release_camera()
-            #cv2.destroyAllWindows()
         except KeyboardInterrupt:
             sys.exit()
 
@@ -113,36 +102,3 @@ class Pipe():
             sys.exit()
         except KeyboardInterrupt:
             sys.exit()
-
-'''self.mover.go_to_loc(ordered_point)
-                #timer code
-                manipulate = self.mover.check_goal_reached()
-                print("manipulate",manipulate)
-                if manipulate == 0:
-                    print("service restart started")
-                    # with open('restart.txt', 'w') as f:
-                    #     f.write('True')
-                    #     f.close()
-                    # goalid = GoalID()
-                    # goal_id.id = ""
-                    # self.mover.cancel_goals_pub.publish(goal_id)
-                    # subprocess.call('start /wait python service_restarter.py', shell=True)
-                    # subprocess.run(["bash", "call_services_heartmet", "restart"], shell=True)
-                    print("Services restart complete")
-                    time.sleep(1)
-                    continue
-                elif manipulate == 2:
-                    time.sleep(2)
-                    continue
-                else:
-                    #get new relative object pose type here
-                    #initial_obj- rob_moved
-                    new_obj_pose = copy.deepcopy(real_obj_pose)
-                    new_obj_pose.pose.position.x -= ordered_point.pose.position.x
-                    new_obj_pose.pose.position.y -= ordered_point.pose.position.y
-                    print("------------------grabing-------------------")
-                    #transformed_pose = mover.transform_head2base(new_obj_pose)
-                    #self.mover.grab(transformed_pose)
-                    #self.mover.check_manipulation_completed()
-                    # marker = Marker()
-                    break'''

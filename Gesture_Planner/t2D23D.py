@@ -386,8 +386,6 @@ class t2d2t3d:
         sorted_index = list(np.array(sortedi)[:,0].astype(int))
         print(sorted_index)
         new_order = list(np.array(valid_points.poses)[sorted_index])
-        '''for i in sorted_index:
-            new_order.append(valid_points.poses[i])'''
         #ordered_point = valid_points[idx[0]]
         valid_points.poses = new_order
         #del valid_points.poses[idx]

@@ -29,7 +29,6 @@ parser.add_argument('--no-trace', action='store_true', help='don`t trace model')
 opt = parser.parse_args()
 
 yd = dy7.YoloDetector(opt)
-#starter = Starter()
 
 try:
     pipeline = Pipe()
@@ -38,13 +37,3 @@ try:
     sys.exit()
 except KeyboardInterrupt:
     sys.exit()
-
-
-# while True:
-#     if (starter.execute_pipeline == 1):
-#         starter.execute_pipeline = -1
-#         pipeline = Pipe()
-#         pipeline.gesture_object_package(yd)
-#         pipeline.plan_package()
-#     elif (starter.execute_pipeline == 2):
-#         sys.exit()

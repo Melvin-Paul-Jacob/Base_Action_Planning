@@ -53,12 +53,6 @@ class Mover:
         rospy.Subscriber("/pickup/feedback", PickupActionFeedback, self.manipulation_state)
         rospy.Subscriber("/pickup/result", PickupActionResult, self.manipulation_complete)
         rospy.Subscriber("/global_pose", PoseStamped, self.subs_base_pose_fn)
-        
-        # self.arm = MoveGroupCommander("arm", wait_for_servers=0.0)
-        # self.arm.set_max_acceleration_scaling_factor(0.4)
-        # self.gripper_controller = GripperController()
-        # self.head = MoveGroupCommander("head",  wait_for_servers=0.0)
-        # self.go_to_home()
 
     #open3d frame: X=forward-backward, Y=right-left, Z= up-down
     #head_rgbd = X=right-left, Y=down-Up, Z= forward-backward
@@ -92,11 +86,6 @@ class Mover:
                       'wrist_ft_sensor_frame_joint': 0.0}
         self.arm.set_joint_value_target(arm_target)
         self.arm.go()
-        '''print("initial arm pose:")
-        arm_pos = self.get_arm_cur()
-        print(arm_pos.transform.translation.x)
-        print(arm_pos.transform.translation.y)
-        print(arm_pos.transform.translation.z)'''  
         head_target = {'head_pan_joint': 0.0,
                        'head_tilt_joint': 0.0}
         self.head.set_joint_value_target(head_target)
@@ -179,13 +168,6 @@ class Mover:
             self.rviz_marker(mark,i+3+1)
         self.rviz_marker(obj_mark,0)
         self.rviz_marker(rob_mark,1, mtype=0)
-        '''while time.time() < start+time_out:
-            #print(time.time())
-            self.rviz_marker(current,2,mtype=0)
-            for i, mark in enumerate(markers):
-                self.rviz_marker(mark,i+3+1)
-            self.rviz_marker(obj_mark,0)
-            self.rviz_marker(rob_mark,1, mtype=0)'''
             #self.rviz_marker(new_rob_mark,2, mtype=0)
 
     def subs_base_pose_fn(self, data):

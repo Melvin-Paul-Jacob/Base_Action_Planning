@@ -1,6 +1,6 @@
 WS22 - Gesture Recognition
 
-The aim of the project is to identify the gesture shown by human and tracing an optimal path to grab the object for pickup gesture.
+The project aims to identify the gesture shown by humans and tracing an optimal path to grab the object for pickup gesture.
 
 <img width="537" alt="gesture" src="https://user-images.githubusercontent.com/86923487/223169041-73e0dca5-c0d4-48bb-bfac-fda09423cc2b.PNG">
 
@@ -96,11 +96,11 @@ Once the launch file is triggered, the scan gesture is shown by human and the ro
 4. mkdir ~/catkin_ws/src
 5. cd ~/catkin_ws/src
 6. git clone <code>https://github.com/b-it-bots/mas_domestic_robotics.git</code>
-7. git clone <code>https://github.com/HBRS-SDP/ws22-gesture_recognition.git</code>
+7. git clone <code>https://github.com/Melvin-Paul-Jacob/Base_Action_Planning.git</code>
 8. cd ~/catkin_ws/
 9. catkin build
 10. cd ~/catkin_ws/
-11. python3 ws22-gesture_recognition/gesture_detect_classify_new/test_pipe_ros.py
+11. python3 Base_Action_Planning/Gesture_Planner/test_pipe_ros.py
 
 
 ## Acknowledgements: <a name="ack"></a>

@@ -102,6 +102,8 @@ Once the launch file is triggered, the scan gesture is shown by human and the ro
 10. cd ~/catkin_ws/
 11. python3 Base_Action_Planning/Gesture_Planner/test_pipe_ros.py
 
+## Paper
+ [Planning Robot Placement for Object Grasping](https://arxiv.org/abs/2405.16692)
 
 ## Acknowledgements: <a name="ack"></a>
 * Thanks to all <code>b-it-bots mas_domestic_robotics</code> [contributors](https://github.com/b-it-bots/mas_domestic_robotics/graphs/contributors)
